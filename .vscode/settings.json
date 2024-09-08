@@ -1,0 +1,10 @@
+
+{
+    "java.project.referencedLibraries": [
+    "C:/javafx-sdk-22.0.2/lib/*.jar"
+],
+"java.project.sourcePaths": [
+    "src"
+]
+
+}

@@ -1,7 +1,11 @@
 {
-    "type": "java",
-    "name": "Launch Main",
-    "request": "launch",
-    "mainClass": "com.Techcare.TechCare.MainDashboard",
-    "vmArgs": "--module-path C:/javafx-sdk-22.0.2/lib --add-modules javafx.controls,javafx.fxml"
+  "type": "java",
+  "name": "Launch Main",
+  "request": "launch",
+  "mainClass": "com.Techcare.TechCare.MainDashboard",
+  "vmArgs": "--module-path C:/javafx-sdk-22.0.2/lib --add-modules javafx.controls,javafx.fxml",
+  "classpath": [
+      "${workspaceFolder}/bin",
+      "C:/javafx-sdk-22.0.2/lib"
+  ]
 }
