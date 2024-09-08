@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import javafx.geometry.Insets;
 
 public class MainDashboard extends Application {
-
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Main Dashboard");
@@ -21,4 +20,28 @@ public class MainDashboard extends Application {
         // Set actions for each button (Navigating to different windows)
         addAppointmentButton.setOnAction(e -> {
             AddAppointment addAppointment = new AddAppointment();
-            addAppointment.start(new Stage
+            addAppointment.start(new Stage());
+        });
+
+        billingButton.setOnAction(e -> {
+            Billing billing = new Billing();
+            billing.start(new Stage());
+        });
+
+        editAppointmentButton.setOnAction(e -> {
+            EditAppointment editAppointment = new EditAppointment();
+            editAppointment.start(new Stage());
+        });
+
+        VBox vbox = new VBox(10, addAppointmentButton, billingButton, editAppointmentButton);
+        vbox.setPadding(new Insets(10));
+
+        Scene scene = new Scene(vbox, 300, 200);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
